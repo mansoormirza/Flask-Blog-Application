@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='icon/blog.png') }}" type="image/x-icon">
+
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            color: #39586e;
+        }
+
+        p{
+            margin-bottom: 3rem;
+        }
+        nav {
+            background-color: #39586e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .main {
+            text-align: center;
+            padding: 20px;
+            padding-bottom: 65px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-bottom: -20px;
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid #39586e;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: #39586e;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        button:hover {
+            background-color: #39586e;
+            color: aliceblue;
+        }
+
+        footer {
+            background-color: #39586e;
+            text-align: center;
+            color: #ffffff;
+            height: 55px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="{{url_for('main.home')}}">Flask Blog</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+    <div class="main">
+        <h2>Discover the World of Flask</h2>
+        <p>Where stories come to life in the digital realm. Join us on a journey of creativity and expression.</p>
+        <a href="{{url_for('users.login')}}"><button id="openSecondPageBtn">Get started</button></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Flask Blog. All rights reserved.</p>
+        <!-- Add additional footer information as needed -->
+    </footer>
+
+</body>
+
+</html>
